@@ -1,11 +1,19 @@
+import { getAllTodos } from '@/api'
+import AddTask from '@/components/AddTask'
+import TodoList from '@/components/TodoList'
 import { Skeleton } from '@/components/ui/skeleton'
 import Link from 'next/link'
 
-export default function Home() {
+export default async function Home() {
+  const tasks = await getAllTodos()
+  console.log(tasks)
   return (
-    <div className=" flex justify-center items-center h-screen bg-black text-white">
-      <h4 className=" text-2xl">Welcome to recipe app</h4>
-      <Link href={'/recipe-list'}>Explore recipe app</Link>
+    <div className=" max-w-4xl mx-auto mt-4">
+      <div className=" text-center my-5 flex flex-col gap-4">
+        <h1>Todo List App</h1>
+        <AddTask />
+      </div>
+      <TodoList tasks={tasks} />
     </div>
   )
 }
