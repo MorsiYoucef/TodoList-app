@@ -15,9 +15,8 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from '@/components/ui/dialog'
-import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa'
+import { FaEdit, FaTrash } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ITask } from '@/types/tasks'
@@ -30,9 +29,9 @@ interface TodoListProps {
 }
 
 const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
-  const [openModalEdit, setOpenModalEdit] = useState(false)
-  const [openModalDelete, setOpenModalDelete] = useState(false)
-  const [taskToEdit, setTaskToEdit] = useState<ITask | null>(null)
+  const [openModalEdit, setOpenModalEdit] = useState(false) //openModalEdit to control the visibility of the edit
+  const [openModalDelete, setOpenModalDelete] = useState(false) //openModalDelete to control the visibility of the delete modals.
+  const [taskToEdit, setTaskToEdit] = useState<ITask | null>(null) //taskToEdit to store the task being edited.
   const [newTaskValue, setNewTaskValue] = useState<string>('')
   const [taskToDelete, setTaskToDelete] = useState<ITask | null>(null)
   const router = useRouter()
