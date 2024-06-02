@@ -23,7 +23,7 @@ import { Input } from '@/components/ui/input'
 import { ITask } from '@/types/tasks'
 import { useState, FormEventHandler } from 'react'
 import { useRouter } from 'next/navigation'
-import { addTodo, updateTodo, deleteTodo } from '@/api'
+import { updateTodo, deleteTodo } from '@/api'
 
 interface TodoListProps {
   tasks: ITask[]
