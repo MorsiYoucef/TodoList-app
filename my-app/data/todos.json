@@ -1,12 +1,20 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "text": "buy milk with some orange"
+      "id": "fe347eef-5ace-4de0-b190-647f563f3be1",
+      "text": "pray on time"
     },
     {
-      "id": "2",
-      "text": "Reading quran"
+      "id": "c282c347-ae4d-4f52-aa77-c1e2734ac543",
+      "text": "read quran"
+    },
+    {
+      "id": "e7c969b9-c6a6-4b5f-815f-b448f1b14ebb",
+      "text": "code 8h+"
+    },
+    {
+      "id": "644b8665-ac1e-4b5b-bde4-35b2d1990524",
+      "text": "got to the bathroom"
     }
   ]
 }
