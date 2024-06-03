@@ -32,14 +32,14 @@ const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
   const [openModalEdit, setOpenModalEdit] = useState(false) //openModalEdit to control the visibility of the edit
   const [openModalDelete, setOpenModalDelete] = useState(false) //openModalDelete to control the visibility of the delete modals.
   const [taskToEdit, setTaskToEdit] = useState<ITask | null>(null) //taskToEdit to store the task being edited.
-  const [newTaskValue, setNewTaskValue] = useState<string>('')
-  const [taskToDelete, setTaskToDelete] = useState<ITask | null>(null)
+  const [newTaskValue, setNewTaskValue] = useState<string>('') //newTaskValue to store the new value of the task being edited.
+  const [taskToDelete, setTaskToDelete] = useState<ITask | null>(null) //taskToDelete to store the task being deleted.
   const router = useRouter()
 
   const handleEditClick = (task: ITask) => {
+    setOpenModalEdit(true)
     setTaskToEdit(task)
     setNewTaskValue(task.text)
-    setOpenModalEdit(true)
   }
 
   const handleDeleteClick = (task: ITask) => {
